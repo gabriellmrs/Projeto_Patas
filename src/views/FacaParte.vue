@@ -40,6 +40,18 @@
             <input id="telefone" type="number" name="telefone" placeholder="Digite seu Telefone" required v-model.trim="telefone" >
         </div>
 
+        <div class="ButtonRadio">
+            <div class="ButtonFixo">
+                <input type="radio" id="Fixo" name="Voluntario" value="Voluntario Fixo" v-model="participacao">
+                <label for="Voluntario Fixo">Voluntario Fixo</label>
+            </div>
+            
+            <div class="ButtonUmDia">
+                <input type="radio" id="UmDia" name="Voluntario" value="Voluntario Por Um Dia" v-model="participacao">
+                <label for="Voluntario Por Um Dia">Voluntario Por Um Dia</label>
+            </div>
+        </div>
+
         <!--Botão cadastrar-->
         <div class="continue-button">
             <button><a href="#">CADASTRAR</a></button>
@@ -67,7 +79,7 @@ export default {
       data: null,
       bairro: null,
       telefone: null,
-      
+      participacao: "Por Um Dia"  
 
     }
   },
@@ -190,9 +202,16 @@ body {
     font-family:'Poppins-ExtraBold', Helvetica, sans-serif;
 }
 
-.box1 {
-    margin-top: 20px; /* Ajuste conforme necessário */
-    text-align: center;
+.ButtonRadio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ButtonFixo input {
+    margin-right: 10px;
+}
+.ButtonUmDia input {
+    margin-right: 10px;
 }
 
 .voltar {
