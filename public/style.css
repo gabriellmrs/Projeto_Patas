@@ -1,106 +1,60 @@
-<template>
-    <NavBar/>
-    <section>
-
-        <div class="box_01">
-            <div class="slogan_texto">
-            <h1>Conectando corações humanos e patinhas peludas</h1>
-                <a href="#ancora">Saiba mais</a>
-            </div>
-            <div class="slogan_img">
-                <img src="img/inicio-cachorro.jpg" alt="Quatro Patas" title="Quatro Patas">
-            </div>
-        </div>
-
-        <div class="box_02"  id="ancora">
-            <div class="box_02_titulo">
-                <h2>O QUE É O PROJETO <span class="efeitoPatas">QUATRO <br/><span class="efeitoPatas2">PATAS <span class="efeitoPatas3">?</span></span></span></h2>
-            </div>
-            <div class="box_02_texto">
-                <p>O Projeto Quatro Patas, criado há três anos para alimentar animais de rua, superou desafios como roubo e falta de voluntários. Além da alimentação, evoluiu para englobar atividades como campanhas de adoção e apoio a protetores. A equipe agradece a todos que contribuíram, destacando que, juntos, fazem a diferença.
-                </p>
-            </div>
-            <div class="box_02_img">
-                <img src="img/grupo_patas.jpeg" title="Grupo Quatro Patas">
-            </div>
-
-            <div class="box_03">
-                <div class="box_03_conteudo">
-                    <div class="box_03_texto">
-                        <h3>Sucesso na Campanha de Adoção: 21 Animais Encontram Lares</h3>
-                        <p>Em um comovente evento de adoção realizado no shopping, 21 animais ganharam novos lares amorosos. A iniciativa,  atraiu a comunidade, que se mostrou solidária e receptiva. Visitantes foram orientados sobre os cuidados necessários, resultando em histórias emocionantes de adoção. A campanha não apenas proporcionou lares felizes, mas também sensibilizou a importância da adoção responsável. Um sucesso que reforça o comprometimento da comunidade com o bem-estar animal.</p>
-                    </div>
-                    <div class="box_03_img">
-                        <img src="img/doacao_patas.jpeg" alt="Doação de Animais" title="Doação de Animais">
-                    </div>
-                </div>
-            </div>
-
-            <div class="box_04">
-                <div class="box_04_conteudo">
-                    <div class="box_04_img">
-                        <img src="img/mochilando.jpg" alt="Mochilando" title="Mochilando">
-                    </div>
-                    <div class="box_04_texto">
-                        <h3>Mochilando Pelas Escolas</h3>
-                        <p>Temos o objetivo de inserir os jovens na causa animal de forma dinâmica e lúdica através de um bate papo onde possamos mostrar que a diferença do futuro serão os jovens de hoje.</p>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="box_05">
-                <div class="box_05_conteudo">
-                    <div class="box_05_texto">
-                        <h3>Comedores pela Cidade</h3>
-                        <p>É uma iniciativa vital que se destaca pela dedicação em oferecer alimento e cuidados nutricionais a animais desamparados. Fundada por voluntários comprometidos, a organização busca não apenas satisfazer a fome imediata, mas também criar uma rede de solidariedade e conscientização comunitária</p>
-                    </div>
-                    <div class="box_05_img">
-                        <img src="img/comedores.jpg" alt="Comedor" title="Comedor">
-                    </div>
-                </div>
-            </div>
-
-            </div>
-
-
-
-
-
-    </section>
-    <router-view/>
-    <Footer/>
-</template>
-
-<script>
-import NavBar from '@/components/NavBar.vue';
-import Footer from '@/components/Footer.vue';
-
-
-export default {
-    components: {
-        NavBar,
-        Footer
-    }
-}
-
-</script>
-
-<style scoped>
-
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500; 0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*---TUDO DO HEADER-----------------------------------------------*/
+header {
+    background-color: #08bcff;
+    padding: 15px;
+}
+
+.pata_header{
+    width: 25px;
+    height: 25px;
+}
+
+.logo{
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-family: "Almarai", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 25px;
+    
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*-----------------------------------------------------------------------------------*/
 
 /*---BOX 01--------------------------------------------------------------------------*/
-
 .box_01 {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 100px;
-    
 }
 
 .slogan_texto {
@@ -180,14 +134,7 @@ export default {
 }
 
 .efeitoPatas {
-    color: #9340FF; 
-}
-.efeitoPatas2 {
-    display: block; /* Garante que a palavra tenha apenas o tamanho necessário */
-    text-align: center;
-}
-.efeitoPatas3 {
-    color: #fff;
+    color: #9340FF;
 }
 
 .box_02_texto {
@@ -212,6 +159,7 @@ export default {
 /*----BOX 03-------------------------------------------------------------------------*/
 
 .box_03 {
+    max-width: auto;
     display: flex;
     background-color: #101728;
 }
@@ -241,11 +189,11 @@ export default {
     font-weight: bold;
     line-height:1.5;
     font-size: 22px;
-    width: 900px;
+    width: 1000px;
 }
 
 .box_03_img img {
-    width: 900px;
+    width: 600px;
     height: 600px;
     border-radius: 50px;
 }
@@ -253,6 +201,7 @@ export default {
 
 /*----BOX 04-------------------------------------------------------------------------*/
 .box_04 {
+    max-width: auto;
     display: flex;
     background-color: #101728;
 }
@@ -260,7 +209,7 @@ export default {
 .box_04_conteudo{
     display: flex;
     margin-top: 80px;
-    margin-left: -140px;
+    margin-left: 100px;
     margin-right: 100px;
 }
 
@@ -288,7 +237,7 @@ export default {
 }
 
 .box_04_img img {
-    width: 650px;
+    width: 600px;
     height: 600px;
     border-radius: 50px;
 }
@@ -336,4 +285,3 @@ export default {
     border-radius: 50px;
     margin-left: 100px;
 }
-</style>
