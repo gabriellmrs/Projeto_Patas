@@ -5,7 +5,7 @@
         <div class="box_01">
             <div class="slogan_texto">
             <h1>Conectando corações humanos e patinhas peludas</h1>
-                <a href="#ancora">Saiba mais</a>
+                <div class="saiba-mais"><a href="#ancora">Saiba mais</a></div>
             </div>
             <div class="slogan_img">
                 <img src="img/inicio-cachorro.jpg" alt="Quatro Patas" title="Quatro Patas">
@@ -14,7 +14,7 @@
 
         <div class="box_02"  id="ancora">
             <div class="box_02_titulo">
-                <h2>O QUE É O PROJETO <span class="efeitoPatas">QUATRO <br/><span class="efeitoPatas2">PATAS <span class="efeitoPatas3">?</span></span></span></h2>
+                <h2>O QUE É O PROJETO <span class="efeitoPatas">QUATRO PATAS ?<br/></span></h2>
             </div>
             <div class="box_02_texto">
                 <p>O Projeto Quatro Patas, criado há três anos para alimentar animais de rua, superou desafios como roubo e falta de voluntários. Além da alimentação, evoluiu para englobar atividades como campanhas de adoção e apoio a protetores. A equipe agradece a todos que contribuíram, destacando que, juntos, fazem a diferença.
@@ -182,13 +182,7 @@ export default {
 .efeitoPatas {
     color: #9340FF; 
 }
-.efeitoPatas2 {
-    display: block; /* Garante que a palavra tenha apenas o tamanho necessário */
-    text-align: center;
-}
-.efeitoPatas3 {
-    color: #fff;
-}
+
 
 .box_02_texto {
     width: 1000px;
@@ -335,5 +329,148 @@ export default {
     height: 600px;
     border-radius: 50px;
     margin-left: 100px;
+}
+/*-----------Responsivo-----------*/
+@media screen and (max-width: 730px ){
+    /*-------------------box 1*-------------------*/
+    .box_01{
+        flex-direction: column-reverse;
+    }
+
+    .slogan_texto h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .saiba-mais{
+        margin-top: -90px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .slogan_img {
+        text-align: center;
+        margin-top: 50px;
+        margin-left: -20px;
+        padding: 10px;
+    }
+
+    .slogan_img img {
+        max-width: 250px;
+        border-radius: 25px;
+    }
+
+    /*------------------box 2---------------------*/
+    .box_02{
+        flex-direction: column;
+    }
+
+    .box_02_titulo{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .box_02_texto p{
+        margin-top: 10px;
+        font-size: 20px;
+        padding: 15px;
+        line-height:1.5;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .box_02_img{
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    /* ------------------box 3------------------- */
+
+    .box_03_texto h3 {
+        font-size: 40px;
+        padding: 10px;
+        margin-left: -90px;
+    }
+
+    .box_03_conteudo{
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .box_03_texto p {
+        font-size: 20px;
+        margin-left: -96px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .box_03_img img {
+        margin-top: 30px;
+        width: 350px;
+        height: 300px;
+        border-radius: 20px;
+        margin-left: -67px;
+    }
+
+    /* ------------------box 4------------------- */
+
+    .box_04_conteudo{
+        margin-top: 10px;
+        flex-direction: column-reverse;
+    }
+    .box_04_texto h3{
+        font-size: 50px;
+        padding: 10px;
+        margin-left: 50px;
+        text-align: center;
+    }
+
+    .box_04_texto p{
+        font-size: 20px;
+        margin-left: 30px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .box_04_img{
+        margin-top: 30px;
+        margin-left:200px;
+        max-width: 70%;
+        max-height: 60%;
+        width: 100%; 
+    }
+
+    /*------------------- box 5------------------ */
+
+    .box_05_conteudo{
+        flex-direction: column;
+        margin-top: -30px;
+    }
+
+    .box_05_texto h3{
+        font-size: 50px;
+        padding: 10px;
+        margin-left: -90px;
+        text-align: center;
+    }
+
+    .box_05_texto p{
+        font-size: 20px;
+        margin-left: -97px;
+        padding: 15px;
+        margin-top: 10px;
+        text-align: justify;
+        text-indent: 20px;
+    }
+
+    .box_05_img{
+        margin-top: 30px;
+        margin-left: -200px;
+        padding: 30px;
+    }
 }
 </style>
