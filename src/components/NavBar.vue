@@ -15,11 +15,11 @@
         <div class="menu-mobile">
 
             <div class="btn-abrir-menu">
-                
+                <button><img src="img/menu_mobile.png"></button>
             </div>
 
             <div class="btn-fechar">
-                <i class="bi bi-x-lg"></i>
+                <button><img src="img/close_menu.png"></button>
             </div>
 
             <nav>
