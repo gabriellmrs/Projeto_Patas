@@ -70,6 +70,10 @@
 <script>
 import HomeView from './HomeView.vue';
 export default {
+    name: "FacaParte",
+    mounted() {
+    document.title = 'Formulario de Inscrição';
+    },
     components: {
         HomeView
     },

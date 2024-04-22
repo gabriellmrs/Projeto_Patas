@@ -78,6 +78,10 @@ import Footer from '@/components/Footer.vue';
 
 
 export default {
+    name: "HomeView",
+    mounted() {
+    document.title = 'Quatro Patas';
+    },
     components: {
         NavBar,
         Footer
