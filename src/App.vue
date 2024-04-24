@@ -9,11 +9,13 @@
 
 import HomeView from './views/HomeView.vue';
 import Footer from './components/Footer.vue';
+import LoginAdmin from './views/LoginAdmin.vue';
 
 
 export default {
   components: {
     Footer,
+    LoginAdmin
   },
   data() {
     return {

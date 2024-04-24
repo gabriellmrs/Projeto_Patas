@@ -24,6 +24,12 @@ const routes = [
     name: 'Eventos',
    
     component: () => import(/* webpackChunkName: "Eventos" */ '../views/Eventos.vue')
+  },
+  {
+    path: '/LoginAdmin',
+    name: 'LoginAdmin',
+   
+    component: () => import(/* webpackChunkName: "LoginAdmin" */ '../views/LoginAdmin.vue')
   }
 ]
 

@@ -11,18 +11,15 @@
             </ul>
         </nav>
 
-        <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo-mobile"></a>
 
         <div class="menu-mobile">
 
             <div class="btn-abrir-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-</svg>
+                <button><img src="img/menu_mobile.png"></button>
             </div>
 
             <div class="btn-fechar">
-                <i class="bi bi-x-lg"></i>
+                <button><img src="img/close_menu.png"></button>
             </div>
 
             <nav>
