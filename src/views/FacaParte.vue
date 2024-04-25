@@ -60,10 +60,6 @@
         
 </div>
 
-
-<div class="box1">
-    <router-link to="./" class="voltar">Voltar</router-link>
-</div>
 </div>
 </template>
 
@@ -218,24 +214,6 @@ body {
     margin-right: 10px;
 }
 
-.voltar {
-    text-decoration: none;
-    text-align: center;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 150px;
-    background: #000;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    display: block;
-    width: 200px;
-    height: 70px;
-    line-height: 49px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
 
 
 @media screen and (max-width: 1650px) {
