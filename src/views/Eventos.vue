@@ -1,4 +1,5 @@
 <template>
+  <NavBar/>
   <header>
     <div class="title">
         <h2>Eventos</h2>
@@ -53,8 +54,13 @@
   </template>
 
   <script>
+import NavBar from '@/components/NavBar.vue';
+
 export default{
-  name: 'Eventos'
+  name: 'Eventos',
+  components: {
+    NavBar
+  }
 }
 
 

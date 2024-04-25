@@ -3,7 +3,7 @@
     <header>
         <nav class="menu-desktop">
             <ul>
-                <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo"></a>
+                <li><router-link to="/"><img src="img/logo_patas.png" alt="logo" class="logo"></router-link></li>
                 <li><router-link to="/FacaParte"><img src="img/pata.svg" :class="pata_style"> FAÇA PARTE</router-link></li>
                 <li><router-link to="/ComoAjudar"><img src="img/pata.svg" :class="pata_style"> COMO AJUDAR</router-link></li>
                 <li><router-link to="/Eventos"><img src="img/pata.svg" :class="pata_style"> EVENTOS</router-link></li>
