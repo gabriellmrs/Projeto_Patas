@@ -21,8 +21,8 @@
 
         <!--inputs-->
         <div class="input-box">
-            <label for="Nome">Nome</label>
-            <input id="nome" type="text" name="nome" placeholder=" Digite seu Nome" required v-model.trim="nome" >
+        <label for="Nome">Nome</label>
+        <input id="nome" type="text" name="nome" placeholder=" Digite seu Nome" required v-model.trim="nome" >
         </div>
 
         <div class="input-box">
@@ -270,6 +270,26 @@ body {
     .form{
         width: auto;
     }
+}
+
+@media screen and (max-width: 1920px ){
+    
+    .conteiner{
+        margin-bottom: 10px;
+    }
+
+    .conteiner {
+        margin-top: -50px;
+    }
+
+    .form-image{
+        height: 700px;
+    }
+
+    .form{
+        height: 700px;
+    }
+        
 }
 
 
