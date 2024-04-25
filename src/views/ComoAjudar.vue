@@ -1,6 +1,13 @@
 <template>
-  <div>
-    <h1>Como Ajudar</h1>
-  </div>
+  <p>dfasdasdsa</p>
 </template>
-  
+
+<script>
+
+
+</script>
+
+
+<style scoped>
+
+</style>
