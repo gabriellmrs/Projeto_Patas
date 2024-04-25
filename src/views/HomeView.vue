@@ -477,4 +477,38 @@ export default {
         padding: 30px;
     }
 }
+
+
+/* Tela de notebook  */
+@media screen and (max-width: 1920px ){
+    
+    /* box 1  */
+
+    .box_01 h1{
+        font-size: 60px;
+    }
+    /* box 2 */
+
+    .box_02 h2{
+        font-size: 65px;
+    }
+
+    /* box 3 */
+
+    /* box 4 */
+    .box_04_conteudo{
+        margin-left: 90px;
+    }
+    /* box 5 */
+
+    .box_05_conteudo{
+        margin-left: 30px;
+    }
+
+    .box_05_img{
+        padding: 20px;
+    }
+
+}
+
 </style>
