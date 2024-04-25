@@ -4,10 +4,10 @@
         <div class="rodapé">
             <a href="#" target="_blank"><img src="img/logo.jpg" alt="logo"></a>
             <div class="contatos">
-                <p>(75)98448302</p>
-                <p>(75)93021346</p>
+                <p class="frase">(75) 9844-8302</p>
+                <p class="frase">(75) 9302-1346</p>
             </div><br>
-            <p>  Não realizamos resgate </p>
+            <p class="frase">  Não realizamos resgate </p>
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/instagram.png" alt="icone-instagram"></a>
                 <a href="https://wa.me/+5575998448302" target="_blank"><img src="img/whatsapp.png" alt="icone-whatsapp"></a>
@@ -41,6 +41,12 @@ footer img{
     align-items: center;
 }
 
+.frase {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .redes-sociais{
     display: flex;
     justify-content: space-around;
@@ -49,9 +55,8 @@ footer img{
 }
 
 .redes-sociais img{
-    height: 40px;
-    width: 40px;
-    filter: grayscale(70%);
+    height: 60px;
+    width: 60px;
 }
 
 .rodapé p{
@@ -59,7 +64,8 @@ footer img{
 }
 
 .redes-sociais img:hover{
-    filter: grayscale(0%);
-    transition: 1s all ease;
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .2s;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <NavBar/>
   <header>
-    <div class="title">
-        <h2>Eventos</h2>
-        <p class="subTitle">Próximos Eventos</p>
+    <div class="inicio">
+        <h2 class="title">Eventos</h2>  
     </div>
+    <p class="subTitle">Próximos Eventos</p>
   </header>
 
 <div class="container">
@@ -18,7 +18,7 @@
     </div>
 
     <div>
-        <p class="date2">Previsão: <span class="red">12/09/2024</span></p>
+        <p class="date">Previsão: <span class="red">12/09/2024</span></p>
         <div class="box">
             <img src="img/mochilando.jpg" alt="Imagem 2" class="imagem">
             <h3 class="titleImg">Mochilando pelas escolas</h3>
@@ -27,13 +27,11 @@
     </div>
 </div>
 
-<header>
-    <p class="subTitle1">Eventos passados</p>
-</header>
+    <p class="subTitle">Eventos passados</p>
 
-<div class="container2">
+<div class="container">
   <div>
-      <p class="date3">Previsão: <span class="red">09/09/2024</span></p>
+      <p class="date">Data: <span class="red">27/01/2024</span></p>
          <div class="box">
            <img src="img/doacao_patas.jpeg" alt="imagem3" class="imagem">
               <h3 class="titleImg">Doação de animais no Shopping Boulevard</h3>
@@ -41,8 +39,8 @@
           </div>
   </div>
 
-  <div>
-    <p class="date4">Previsão: <span class="red4">09/09/2024</span></p>
+  <div >
+    <p class="date">Data: <span class="red">12/02/2024</span></p>
     <div class="box">
       <img src="img/comedores.jpg" alt="imagem4" class="imagem">
       <h3 class="titleImg">Instalação de comedoros na Fraga Maia</h3>
@@ -50,16 +48,18 @@
     </div>
   </div>
 </div>
-
+<Footer/>
   </template>
 
   <script>
+import Footer from '@/components/Footer.vue';
 import NavBar from '@/components/NavBar.vue';
 
 export default{
   name: 'Eventos',
   components: {
-    NavBar
+    NavBar,
+    Footer
   }
 }
 
@@ -68,43 +68,47 @@ export default{
   
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500; 0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
     background-color: white;
 }
+.inicio {
+    margin-left: 20px;
+    margin-top: 30px;
+}
 
 .title{
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
 }
 
 .subTitle{
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 4%;
+    font-family: "Roboto", sans-serif;
+    font-size:30px;
+    margin-left: 5%;
 }
-
-  .subTitle1{
-    margin-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    font-weight: bold;
-  }
-
 
 .container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1%;
+    margin-left: 6%;
+    margin-bottom: 20px;
  /* justify-content: center; */
 } 
 
-.container2{
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .date{
  /* display: inline; */
-    margin-left: 50%;
+    margin-left: 40%;
+    font-size: 23px;
+    display: flex;
     /* margin-bottom: 5px;  */
 }
 
@@ -113,23 +117,6 @@ body{
  /* margin-left: 30%; */
 }
 
-.date2{
-/*display: inline; */
-  margin-left: 50%;
-  /* margin-top: 10px;  */
-}
-
-.date3{
-  margin-left: 50%;
-}
-
-.date4{
-  margin-left: 50%;
-}
-
-.red4{
-  color: red;
-}
   
 .box {
     background-color: white;
@@ -149,14 +136,17 @@ body{
   }
 
 .titleImg{
-    font-size: xx-large;
+    font-size: 25px;
     margin: 10px;
+    font-family: "Roboto", sans-serif;
 }
 
 .frase{
     text-align: left;
     font: 300;
     margin: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #787171;
   }
 
 @media only screen and(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait){
@@ -171,13 +161,6 @@ body{
     margin-bottom: 15px; 
 }
 
-.date2{
-/*display: inline; */
-  margin-left: 50%;
-  margin-bottom: 10px;
-  margin-top:10; 
-}
-
 .box{
   width: 100%;
   height: 500px;
@@ -187,18 +170,12 @@ body{
 
 @media screen and (max-width: 1350px){
 
-.date2{
-  /* margin-left: 50%; */
+.date{
+
   margin-top: 10px; 
 }
 
-.container{
-  margin-left: 30%;
-}
 
-.container2{
-  margin-left: 30%;
-}
 
 }
 
