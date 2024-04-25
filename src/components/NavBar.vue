@@ -3,11 +3,11 @@
     <header>
         <nav class="menu-desktop">
             <ul>
-                <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo"></a>
-                <li><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
-                <li><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
-                <li><router-link to="/Eventos"><img src="img/pata.svg" class="pata_header"> EVENTOS</router-link></li>
-                <li><router-link to="/"><img src="img/pata.svg" class="pata_header"> CONTATOS</router-link></li>
+                <li><router-link to="/"><img src="img/logo_patas.png" alt="logo" class="logo"></router-link></li>
+                <li><router-link to="/FacaParte"><img src="img/pata.svg" :class="pata_style"> FAÇA PARTE</router-link></li>
+                <li><router-link to="/ComoAjudar"><img src="img/pata.svg" :class="pata_style"> COMO AJUDAR</router-link></li>
+                <li><router-link to="/Eventos"><img src="img/pata.svg" :class="pata_style"> EVENTOS</router-link></li>
+                <li><router-link to="/"><img src="img/pata.svg" :class="pata_style"> CONTATOS</router-link></li>
             </ul>
         </nav>
 
@@ -41,7 +41,12 @@
 
 <script>
     export default {
-        name: "NavBar" 
+        name: "NavBar",
+        data() {
+            return {
+                pata_style:'pata_header'
+            }
+        } 
     }
 </script>
 
@@ -66,6 +71,7 @@ header {
     right: 0;
     background-color: #08bcff;
     padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .pata_header{

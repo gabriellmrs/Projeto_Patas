@@ -2,7 +2,7 @@
     <NavBar/>
     <section>
 
-        <div class="box_01">
+        <div :class="box1_style">
             <div class="slogan_texto">
             <h1>Conectando corações humanos e patinhas peludas</h1>
                 <div class="saiba-mais"><a href="#ancora">Saiba mais</a></div>
@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="box_02"  id="ancora">
+        <div :class="box2_style"  id="ancora">
             <div class="box_02_titulo">
                 <h2>O QUE É O PROJETO <span class="efeitoPatas">QUATRO PATAS ?<br/></span></h2>
             </div>
@@ -24,7 +24,7 @@
                 <img src="img/grupo_patas.jpeg" title="Grupo Quatro Patas">
             </div>
 
-            <div class="box_03">
+            <div :class="box3_style">
                 <div class="box_03_conteudo">
                     <div class="box_03_texto">
                         <h3>Sucesso na Campanha de Adoção: 21 Animais Encontram Lares</h3>
@@ -36,7 +36,7 @@
                 </div>
             </div>
 
-            <div class="box_04">
+            <div :class="box4_style">
                 <div class="box_04_conteudo">
                     <div class="box_04_img">
                         <img src="img/mochilando.jpg" alt="Mochilando" title="Mochilando">
@@ -49,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="box_05">
+            <div :class="box5_style">
                 <div class="box_05_conteudo">
                     <div class="box_05_texto">
                         <h3>Comedores pela Cidade</h3>
@@ -85,6 +85,15 @@ export default {
     components: {
         NavBar,
         Footer
+    },
+    data() {
+        return {
+            box1_style: 'box_01',
+            box2_style: 'box_02',
+            box3_style: 'box_03',
+            box4_style: 'box_04',
+            box5_style: 'box_05'
+        }
     }
 }
 
