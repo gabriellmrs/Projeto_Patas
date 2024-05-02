@@ -1,5 +1,5 @@
 <template>
-  
+
   <div class="conteiner">
 
 <div class="form-image"> <!--Bloco da direita (azul)-->

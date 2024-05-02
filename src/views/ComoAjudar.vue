@@ -3,7 +3,7 @@
   <div class="container">
   <h1>Como Ajudar</h1>
   <div class="opcoes">
-    <div class="opcao" onclick="selecionarOpcao(this)">
+    <div class="opcao" @click="selecionarOpcao">
       <span>Pix</span>
       <p>Sua contribuição será muito bem-vinda. Qualquer valor será útil e nos ajudará bastante.</p>
       <div class="detalhes-opcao">
@@ -12,7 +12,7 @@
         <input id="pix-info" type="text" class="campo-adicional" placeholder="Informe seu Pix">
       </div>
     </div>
-    <div class="opcao" onclick="selecionarOpcao(this)">
+    <div class="opcao" @click="selecionarOpcao">
       <span>Ração</span>
       <p>Alimentar um animal é algo muito importante para a saúde dele.</p>
       <div class="detalhes-opcao">
@@ -21,7 +21,7 @@
         <input type="radio" name="tipo-embalagem" value="pacote"> Pacote
       </div>
     </div>
-    <div class="opcao" onclick="selecionarOpcao(this)">
+    <div class="opcao" @click="selecionarOpcao">
       <span>Materiais</span>
       <p>Você está ajudando em uma causa maior.</p>
       <div class="detalhes-opcao">
@@ -33,7 +33,7 @@
         </select>
       </div>
     </div>
-    <div class="opcao" onclick="selecionarOpcao(this)">
+    <div class="opcao" @click="selecionarOpcao">
       <span>Outros</span>
       <p>Ajude de outras formas.</p>
       <div class="detalhes-opcao">
@@ -56,19 +56,20 @@ import NavBar from '@/components/NavBar.vue';
       components:{
         NavBar,
         Footer
-      },
-      data() {
-      
+        
       },
       methods: {
       // Função para mostrar os detalhes da opção clicada e fechar os outros
-      selecionarOpcao(opcao) {
+      selecionarOpcao(evento) {
+      const opcao = evento.currentTarget;
       const todasOpcoes = document.querySelectorAll('.opcao');
+
       todasOpcoes.forEach((item) => {
       if(item !== opcao) {
         item.classList.remove('aberta');
       }
     });
+
     opcao.classList.toggle('aberta');
     const detalhes = opcao.querySelector('.detalhes-opcao');
     if (detalhes) {
@@ -85,8 +86,11 @@ import NavBar from '@/components/NavBar.vue';
   // Função para enviar o formulário
   function enviarFormulario() {
     const pixInfo = document.getElementById('pix-info').value;
+
     const tipoRacao = document.querySelector('input[name="tipo-embalagem"]:checked');
+
     const tipoMateriais = document.getElementById('materiais-select').value;
+
     const outrosInfo = document.getElementById('outros-info').value;
     
     // Aqui você pode adicionar a lógica para enviar os dados para o servidor ou fazer o que desejar com eles
@@ -123,6 +127,7 @@ import NavBar from '@/components/NavBar.vue';
   h1 {
     text-align: center;
     color: #333;
+    margin-bottom: 10px;
   }
 
   .opcoes {
