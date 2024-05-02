@@ -45,6 +45,9 @@
 
   export default {
     name:'AdminVoluntarios',
+    mounted() {
+    document.title = 'Administrador';
+    },
     components: {
       
     },

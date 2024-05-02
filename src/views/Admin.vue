@@ -149,6 +149,9 @@
 <script>
     export default {
         name: "Admin",
+        mounted() {
+    document.title = 'Administrador';
+    },
         data() {
             return {
                 texto_style:'texto',
