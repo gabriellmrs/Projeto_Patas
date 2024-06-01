@@ -26,6 +26,9 @@
   <script>
   export default {
     name: "LoginAdmin",
+    mounted() {
+    document.title = 'Login Administradaor';
+    },
     data() {
       return {
         username: "",
