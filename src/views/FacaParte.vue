@@ -69,9 +69,21 @@ export default {
     name: "FacaParte",
     mounted() {
     document.title = 'Formulario de Inscrição';
+
+    window.addEventListener('popstate', this.handlePopState);
     },
-    components: {
-        HomeView
+    beforeDestroy() {
+        // Remove o ouvinte de evento quando o componente for destruído
+        window.removeEventListener('popstate', this.handlePopState);
+    },
+    methods: {
+        handlePopState() {
+            // Verifica se a URL atual é a página principal
+            if (window.location.pathname === '/') {
+                // Recarrega a página principal
+                window.location.reload();
+            }
+        }
     },
   data() {
     return {
@@ -83,6 +95,9 @@ export default {
 
     }
   },
+  components: {
+        HomeView
+    },
 
 }
 </script>

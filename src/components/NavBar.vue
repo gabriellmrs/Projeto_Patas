@@ -99,7 +99,7 @@ nav.menu-desktop a {
     font-family: "Almarai", sans-serif;
     font-weight: bold;
     font-style: normal;
-    font-size: 25px;
+    font-size: 20px;
     
 }
 
