@@ -1,39 +1,32 @@
 <template>
 
     <header>
-        <nav class="menu-desktop">
-            <ul>
+        <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo" id="logo"></a>
+        <nav>
+            <div class="menu">
+                <ul>
                 <li><router-link to="/"><img src="img/logo_patas.png" alt="logo" class="logo"></router-link></li>
                 <li><router-link to="/FacaParte"><img src="img/pata.svg" :class="pata_style"> FAÇA PARTE</router-link></li>
                 <li><router-link to="/ComoAjudar"><img src="img/pata.svg" :class="pata_style"> COMO AJUDAR</router-link></li>
                 <li><router-link to="/Eventos"><img src="img/pata.svg" :class="pata_style"> EVENTOS</router-link></li>
                 <li><router-link to="/"><img src="img/pata.svg" :class="pata_style"> CONTATOS</router-link></li>
             </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button @click="toggleMenu"><img src="img/menu_mobile.png"></button>
+            </div>
         </nav>
-
-
-        <div class="menu-mobile">
-
-            <div class="btn-abrir-menu">
-                <button><img src="img/menu_mobile.png"></button>
-            </div>
-
-            <div class="btn-fechar">
-                <button><img src="img/close_menu.png"></button>
-            </div>
-
-            <nav>
+        <div :class="['mobile-menu',{open: isMenuOpen}]">
             <ul>
-                <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo"></a>
-                <li><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
-                <li><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
-                <li><router-link to="/Eventos"><img src="img/pata.svg" class="pata_header"> EVENTOS</router-link></li>
-                <li><router-link to="/"><img src="img/pata.svg" class="pata_header"> CONTATOS</router-link></li>
+                <button class="close-icon"  @click="toggleMenu"><img src="img/close_menu.png"></button>
+                <li class="nav-item"><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
+                <li class="nav-item"><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
+                <li class="nav-item"><router-link to="/Eventos"><img src="img/pata.svg" class="pata_header"> EVENTOS</router-link></li>
+                <li class="nav-item"><router-link to="/"><img src="img/pata.svg" class="pata_header"> CONTATOS</router-link></li>
             </ul>
-        </nav>
         </div>
 
-        <div class="overlay-menu"></div>
+        <div class="overlay-menu" :class="{ open: isMenuOpen }" @click="toggleMenu"></div>
 
     </header>
     
@@ -44,9 +37,15 @@
         name: "NavBar",
         data() {
             return {
-                pata_style:'pata_header'
+                pata_style:'pata_header',
+                isMenuOpen: false
             }
-        } 
+        },
+        methods: {
+            toggleMenu(){
+                this.isMenuOpen = !this.isMenuOpen;
+            }
+        }
     }
 </script>
 
@@ -86,14 +85,14 @@ header {
     
 }
 
-nav.menu-desktop ul {
+nav ul { 
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
 }
 
-nav.menu-desktop a {
+nav a {
     color: black;
     text-decoration: none;
     font-family: "Almarai", sans-serif;
@@ -103,96 +102,151 @@ nav.menu-desktop a {
     
 }
 
-nav.menu-desktop a:hover {
+nav a:hover {
     color: rgb(255, 255, 255);
 }
 
-/*--------- MENU MOBILE---------- */
-
-.menu-mobile{
-    background-color: #08bcff;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-}
-
-.menu-mobile nav ul{
-    text-align: right;
-    list-style: none;
-}
-
-.menu-mobile nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-}
-
-ul li{
-    padding: 15px 5%;
-}
-
-
-.menu-mobile nav ul li a:hover{
-    color: #101728;
-}
-
-.menu-mobile .btn-fechar{
-    padding: 20px 8%;
-}
-
-.menu-mobile .btn-fechar{
-    color: #101728;
-    font-size: 20px;
-}
-
-.btn-abrir-menu {
-    color: #101728;
-    font-size: 40px;
-}
-
-/* .overlay-menu{
-    background-color: #0000006c;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 88888;
+.mobile-menu-icon{
     display: none;
-} */
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu.open {
+    right: 0; 
+}
+
+#logo{
+    display: none;
+}
 
 /*-----------Responsivo-----------*/
 
-@media screen and (max-width: 730px ){
-    /*Cabeçalho*/
-
-    header{
-        padding: 10px;
-    }
-
-    header .logo-mobile{
-        text-align: left;
-        width: 70px;
-        height: 60px;
-    }
-
-    .menu-desktop{
+@media screen and (max-width: 730px) {
+    .menu {
         display: none;
     }
 
-    .menu-mobile{
-        display: flex;
-        justify-content: space-around;
+    #logo {
+        display: block;
     }
 
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        margin-right: auto;
+    }
+
+    .mobile-menu-icon {
+        text-align: right;
+    }
+
+    .mobile-menu {
+        background-color: #08bcff;
+        height: 50vh; /* Ajustado para ocupar 50% da altura da tela */
+        position: fixed;
+        top: -50vh; /* Começa fora da tela, na parte superior */
+        right: 0;
+        z-index: 99999;
+        width: 100%;
+        overflow: hidden;
+        transition: top 0.3s; /* Transição ajustada para movimentação vertical */
+        display: flex;
+        flex-direction: row; /* Ajustado para alinhar os itens horizontalmente */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu.open {
+        top: 0; /* Quando aberto, alinha com a parte superior da tela */
+    }
+
+    .mobile-menu-icon button {
+        margin-left: auto;
+        padding: 5px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-menu ul li {
+        margin: 10px 0; 
+        text-align: center;
+        width: 100%;
+    }
+
+    .mobile-menu ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .mobile-menu ul li a:hover {
+        color: black;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 7px;
+        cursor: pointer;
+        transition: right 0.3s;
+        padding: 5px;
+        background: none; 
+        border: none;
+    }
+
+    .close-icon img {
+        width: 50px; 
+        height: 50px; 
+    }
+
+    .mobile-menu-icon img {
+    width: 30px; 
+    height: 30px; 
+    }
+
+    .overlay-menu {
+        display: none; /* Inicialmente escondido */
+        position: fixed;
+        top: 50vh; /* Inicia no meio da tela */
+        left: 0;
+        width: 100%;
+        height: 50vh; /* Ocupa a metade inferior da tela */
+        background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semitransparente */
+        z-index: 99998;
+    }
+
+    .overlay-menu.open {
+        display: block; /* Mostra o sombreamento quando o menu está aberto */
+    }
 }
 
 
 
-/*-----------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------------*/
 </style>

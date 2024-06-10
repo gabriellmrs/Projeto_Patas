@@ -50,4 +50,18 @@ const router = createRouter({
   routes
 })
 
+
+
+router.beforeEach((to, from, next) => {
+
+  if (from.name === 'FacaParte') {
+    if (to.name !== 'home') {
+      window.location.href = '/';
+      
+    }
+  }
+  next();
+})
+
+
 export default router

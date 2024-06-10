@@ -432,17 +432,18 @@ export default {
     .box_04_conteudo{
         margin-top: 10px;
         flex-direction: column-reverse;
+        margin-left: -97px;
     }
     .box_04_texto h3{
         font-size: 50px;
         padding: 10px;
-        margin-left: 50px;
+        margin-left: -197px;
         text-align: center;
     }
 
     .box_04_texto p{
         font-size: 20px;
-        margin-left: 30px;
+        margin-left: -197px;
         padding: 15px;
         margin-top: 10px;
         text-align: justify;
@@ -451,10 +452,8 @@ export default {
 
     .box_04_img{
         margin-top: 30px;
-        margin-left:200px;
-        max-width: 70%;
-        max-height: 60%;
-        width: 100%; 
+        margin-left: -92px;
+        padding: 30px;
     }
 
     /*------------------- box 5------------------ */
@@ -467,13 +466,13 @@ export default {
     .box_05_texto h3{
         font-size: 50px;
         padding: 10px;
-        margin-left: -90px;
+        margin-left: -27px;
         text-align: center;
     }
 
     .box_05_texto p{
         font-size: 20px;
-        margin-left: -97px;
+        margin-left: -27px;
         padding: 15px;
         margin-top: 10px;
         text-align: justify;
@@ -482,8 +481,13 @@ export default {
 
     .box_05_img{
         margin-top: 30px;
-        margin-left: -200px;
+        margin-left: -130px;
         padding: 30px;
+    }
+    
+    /* rodapé */
+    footer{
+        display: none;
     }
 }
 

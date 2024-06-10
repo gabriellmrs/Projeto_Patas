@@ -60,7 +60,8 @@ export default{
   components: {
     NavBar,
     Footer
-  }
+  },
+  
 }
 
 
