@@ -5,7 +5,7 @@
         <div :class="box1_style">
             <div class="slogan_texto">
             <h1>Conectando corações humanos e patinhas peludas</h1>
-                <div class="saiba-mais"><a href="#ancora">Saiba mais</a></div>
+                <div class="saiba-mais"><a href="#ancora" @click.prevent="scrollToSection">Saiba mais</a></div>
             </div>
             <div class="slogan_img">
                 <img src="img/inicio-cachorro.jpg" alt="Quatro Patas" title="Quatro Patas">
@@ -93,6 +93,16 @@ export default {
             box3_style: 'box_03',
             box4_style: 'box_04',
             box5_style: 'box_05'
+        }
+    },
+    methods: {
+        scrollToSection() {
+            setTimeout(() => {
+                const section = document.getElementById('ancora');
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
         }
     }
 }
@@ -402,7 +412,7 @@ export default {
     .box_03_texto h3 {
         font-size: 40px;
         padding: 10px;
-        margin-left: -90px;
+        margin-left: -94px;
     }
 
     .box_03_conteudo{
@@ -412,7 +422,7 @@ export default {
 
     .box_03_texto p {
         font-size: 20px;
-        margin-left: -96px;
+        margin-left: -99px;
         padding: 15px;
         margin-top: 10px;
         text-align: justify;
@@ -424,7 +434,7 @@ export default {
         width: 350px;
         height: 300px;
         border-radius: 20px;
-        margin-left: -67px;
+        margin-left: -70px;
     }
 
     /* ------------------box 4------------------- */
@@ -487,7 +497,7 @@ export default {
     
     /* rodapé */
     footer{
-        display: none;
+        display: block
     }
 }
 
