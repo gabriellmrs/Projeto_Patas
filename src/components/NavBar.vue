@@ -1,7 +1,7 @@
 <template>
 
     <header>
-        <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/logo_patas.png" alt="logo" class="logo" id="logo"></a>
+        <router-link to="/"><img src="img/logo_patas.png" class="logo" id="logo"></router-link>
         <nav>
             <div class="menu">
                 <ul>
