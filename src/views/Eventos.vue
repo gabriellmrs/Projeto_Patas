@@ -176,8 +176,19 @@ body{
   margin-top: 10px; 
 }
 
+}
 
+@media screen and (max-width: 730px){
 
+  .box{
+    margin-left: -3px;
+    margin-bottom: 15px;
+  }
+
+}
+
+.red{
+  margin-bottom: 10px;
 }
 
 

@@ -41,29 +41,61 @@
   </template>
   
   <script>
+// import axios from '@/utils/axios'
+// import Volunteer from '@/models/voluntarios' 
 
 
-  export default {
-    name:'AdminVoluntarios',
-    mounted() {
-    document.title = 'Administrador';
-    },
-    components: {
-      
-    },
-    data() {
-      return {
-        voluntarios: [
-          { id: 1, nome: 'Nome 1', dataNascimento: '01/01/1990', telefone: '(00) 0000-0000', bairro: 'Bairro 1' },
-          { id: 2, nome: 'Nome 2', dataNascimento: '02/02/1991', telefone: '(11) 1111-1111', bairro: 'Bairro 2' },
-          { id: 3, nome: 'Nome 3', dataNascimento: '03/03/1992', telefone: '(22) 2222-2222', bairro: 'Bairro 3' },
-          { id: 4, nome: 'Nome 4', dataNascimento: '04/04/1993', telefone: '(33) 3333-3333', bairro: 'Bairro 4' },
-          { id: 5, nome: 'Nome 5', dataNascimento: '05/05/1994', telefone: '(44) 4444-4444', bairro: 'Bairro 5' }
-        ]
-      };
+export default {
+  name: "CadastroVoluntarios",
+  data() {
+    return {
+      Volunteer: [],
+      form: {
+        name: '',
+        data: '',
+        bairro: '',
+        telefone: '',
+      }
     }
-  };
-  </script>
+  },
+  mounted() {
+    this.fetchVolunteers();
+  },
+  methods: {
+    async fetchVolunteers() {
+      try {
+        const { data } = await axios.get('/volunteers');
+        this.volunteers = data;
+      } catch (error) {
+        console.warn(error);
+      }
+    },
+    async createVolunteer() {
+      try {
+        const { data } = await axios.post('/volunteers', this.form);
+        this.volunteers.push(data);
+        this.clearForm();
+      } catch (error) {
+        console.warn(error);
+      }
+    },
+    async deleteVolunteer(id) {
+      try {
+        await axios.delete(`/volunteers/${id}`);
+        this.volunteers = this.volunteers.filter(volunteer => volunteer.id !== id);
+      } catch (error) {
+        console.warn(error);
+      }
+    },
+    clearForm() {
+      this.form.name = '';
+      this.form.data = '';
+      this.form.bairro = '';
+      this.form.telefone = '';
+    }
+  }
+}
+</script>
   
   <style scoped>
 

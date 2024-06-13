@@ -253,6 +253,85 @@ body {
     }
 }
 
+@media screen and (max-width: 730px) {
+    .conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-image, .form {
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.form-image {
+    background-color: #08bcff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-image h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.form-image p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-header {
+    text-align: center;
+}
+
+.input-box, .ButtonRadio, .continue-button {
+    margin-bottom: 15px;
+}
+
+.input-box label, .ButtonRadio label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input, .ButtonRadio input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.continue-button {
+    text-align: center;
+}
+
+.continue-button button {
+    background-color: #08bcff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.continue-button button a {
+    color: #fff;
+    text-decoration: none;
+}
+}
+
 @media screen and (max-width:400px){
     .form{
         width: auto;

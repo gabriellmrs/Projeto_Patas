@@ -434,7 +434,7 @@ export default {
         width: 350px;
         height: 300px;
         border-radius: 20px;
-        margin-left: -70px;
+        margin-left: -80px;
     }
 
     /* ------------------box 4------------------- */
@@ -462,7 +462,7 @@ export default {
 
     .box_04_img{
         margin-top: 30px;
-        margin-left: -92px;
+        margin-left: -85px;
         padding: 30px;
     }
 
@@ -491,7 +491,7 @@ export default {
 
     .box_05_img{
         margin-top: 30px;
-        margin-left: -130px;
+        margin-left: -125px;
         padding: 30px;
     }
     

@@ -16,13 +16,14 @@
                 <button @click="toggleMenu"><img src="img/menu_mobile.png"></button>
             </div>
         </nav>
+
         <div :class="['mobile-menu',{open: isMenuOpen}]">
             <ul>
                 <button class="close-icon"  @click="toggleMenu"><img src="img/close_menu.png"></button>
-                <li class="nav-item"><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
-                <li class="nav-item"><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
-                <li class="nav-item"><router-link to="/Eventos"><img src="img/pata.svg" class="pata_header"> EVENTOS</router-link></li>
-                <li class="nav-item"><router-link to="/"><img src="img/pata.svg" class="pata_header"> CONTATOS</router-link></li>
+                <li class="nav-item" id="facaParte"><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
+                <li class="nav-item" id="comoAjudar"><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
+                <li class="nav-item" id="eventos"><router-link to="/Eventos"><img src="img/pata.svg" class="pata_header"> EVENTOS</router-link></li>
+                <li class="nav-item" id="contatos"><router-link to="/"><img src="img/pata.svg" class="pata_header"> CONTATOS</router-link></li>
             </ul>
         </div>
 
@@ -164,7 +165,6 @@ nav a:hover {
         overflow: hidden;
         transition: top 0.3s; /* Transição ajustada para movimentação vertical */
         display: flex;
-        flex-direction: row; /* Ajustado para alinhar os itens horizontalmente */
         align-items: center;
         justify-content: center;
     }
@@ -241,6 +241,22 @@ nav a:hover {
 
     .overlay-menu.open {
         display: block; /* Mostra o sombreamento quando o menu está aberto */
+    }
+
+    #facaParte{
+        margin-left: 10px;
+    }
+
+    #comoAjudar{
+        margin-left: 32px;
+    }
+
+    #eventos{
+        margin-right: 15px;
+    }
+
+    #contatos{
+        margin-right: 3px;
     }
 }
 
