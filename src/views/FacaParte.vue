@@ -332,7 +332,7 @@ body {
 }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:600px){
     .form{
         width: auto;
     }
