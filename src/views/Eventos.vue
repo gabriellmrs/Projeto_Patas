@@ -8,6 +8,7 @@
   </header>
 
 <div class="container">
+   <!-- Evento 1: Palestra sobre conscientização -->
     <div>
         <p class="date">Previsão: <span class="red">09/09/2024</span></p>
         <div class="box">
@@ -17,6 +18,7 @@
         </div>
     </div>
 
+    <!-- Evento 2: Mochilando pelas escolas -->
     <div>
         <p class="date">Previsão: <span class="red">12/09/2024</span></p>
         <div class="box">
@@ -30,6 +32,7 @@
     <p class="subTitle">Eventos passados</p>
 
 <div class="container">
+  <!-- Evento passado 1: Doação de animais no Shopping Boulevard -->
   <div>
       <p class="date">Data: <span class="red">27/01/2024</span></p>
          <div class="box">
@@ -39,6 +42,7 @@
           </div>
   </div>
 
+  <!-- Evento passado 2: Instalação de comedores na Fraga Maia -->
   <div >
     <p class="date">Data: <span class="red">12/02/2024</span></p>
     <div class="box">
@@ -48,6 +52,7 @@
     </div>
   </div>
 </div>
+<!-- Incluindo o componente Footer -->
 <Footer/>
   </template>
 

@@ -1,6 +1,7 @@
 <template>
 
-  <div class="conteiner">
+<div class="conteiner">
+<!-- Bloco da direita (azul) -->
 
 <div class="form-image"> <!--Bloco da direita (azul)-->
     <img src="img/logo_patas.png" alt="Logo">
@@ -8,10 +9,12 @@
     <p>Unidos por um mundo mais humano. Ajude a cuidar dos nossos amigos de quatro patas. Junte-se a nós para dar amor e cuidado aos animais de rua</p>
 </div>
 
-<div class="form"><!--Formulario-->
+<!--Formulario-->
+<div class="form">
     <form action="#">
 
-        <div class="form-header"><!--TitUlo do formulario-->
+        <!--TitUlo do formulario-->
+        <div class="form-header">
             
             <div class="title">
                 <h1>FORMULARIO DE INSCRIÇÃO</h1>
@@ -19,7 +22,7 @@
 
         </div>
 
-        <!--inputs-->
+        <!-- Inputs do formulário -->
         <div class="input-box">
         <label for="Nome">Nome</label>
         <input id="nome" type="text" name="nome" placeholder=" Digite seu Nome" required v-model.trim="nome" >

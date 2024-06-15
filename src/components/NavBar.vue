@@ -1,10 +1,12 @@
 <template>
 
     <header>
+         <!-- Link para a página inicial com a logo -->
         <router-link to="/"><img src="img/logo_patas.png" class="logo" id="logo"></router-link>
         <nav>
             <div class="menu">
-                <ul>
+                <!-- Links de navegação com ícones e texto -->
+            <ul>
                 <li><router-link to="/"><img src="img/logo_patas.png" alt="logo" class="logo"></router-link></li>
                 <li><router-link to="/FacaParte"><img src="img/pata.svg" :class="pata_style"> FAÇA PARTE</router-link></li>
                 <li><router-link to="/ComoAjudar"><img src="img/pata.svg" :class="pata_style"> COMO AJUDAR</router-link></li>
@@ -13,12 +15,15 @@
             </ul>
             </div>
             <div class="mobile-menu-icon">
+                <!-- Botão para abrir o menu móvel -->v
                 <button @click="toggleMenu"><img src="img/menu_mobile.png"></button>
             </div>
         </nav>
 
+         <!-- Menu móvel que aparece em telas menores -->
         <div :class="['mobile-menu',{open: isMenuOpen}]">
             <ul>
+                <!-- Botão para fechar o menu móvel -->
                 <button class="close-icon"  @click="toggleMenu"><img src="img/close_menu.png"></button>
                 <li class="nav-item" id="facaParte"><router-link to="/FacaParte"><img src="img/pata.svg" class="pata_header"> FAÇA PARTE</router-link></li>
                 <li class="nav-item" id="comoAjudar"><router-link to="/ComoAjudar"><img src="img/pata.svg" class="pata_header"> COMO AJUDAR</router-link></li>
@@ -27,6 +32,7 @@
             </ul>
         </div>
 
+        <!-- Sombreamento que aparece quando o menu móvel está aberto -->
         <div class="overlay-menu" :class="{ open: isMenuOpen }" @click="toggleMenu"></div>
 
     </header>
@@ -35,14 +41,15 @@
 
 <script>
     export default {
-        name: "NavBar",
+        name: "NavBar", // Nome do componente
         data() {
             return {
-                pata_style:'pata_header',
-                isMenuOpen: false
+                pata_style:'pata_header',  // Classe CSS para os ícones de pata
+                isMenuOpen: false // Estado do menu móvel (aberto ou fechado)
             }
         },
         methods: {
+             // Método para alternar o estado do menu móvel
             toggleMenu(){
                 this.isMenuOpen = !this.isMenuOpen;
             }

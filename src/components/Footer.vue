@@ -2,12 +2,16 @@
 
 <footer>
         <div class="rodapé">
+            <!-- Link para a logo -->
             <a href="#" target="_blank"><img src="img/logo.jpg" alt="logo"></a>
             <div class="contatos">
+                 <!-- Contatos  -->
                 <p class="frase">(75) 9844-8302</p>
                 <p class="frase">(75) 9302-1346</p>
             </div><br>
+             <!-- Informação adicional -->
             <p class="frase">  Não realizamos resgate </p>
+            <!-- Links para redes sociais -->
             <div class="redes-sociais">
                 <a href="https://www.instagram.com/quatropatasfsa/" target="_blank"><img src="img/instagram.png" alt="icone-instagram"></a>
                 <a href="https://wa.me/+5575998448302" target="_blank"><img src="img/whatsapp.png" alt="icone-whatsapp"></a>
@@ -19,7 +23,7 @@
 
 <script>
 export default {
-    name: "Footer" 
+    name: "Footer" // Nome do componente
 }
 </script>
 
@@ -69,6 +73,7 @@ footer img{
     transition: .2s;
 }
 
+/* Estilos para telas menores */
 @media screen and (max-width: 730px ){
     .rodapé{
         display: flex;

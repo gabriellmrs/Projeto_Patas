@@ -2,6 +2,7 @@
     <NavBar/>
     <section>
 
+        <!-- Primeira seção com slogan -->
         <div :class="box1_style">
             <div class="slogan_texto">
             <h1>Conectando corações humanos e patinhas peludas</h1>
@@ -12,6 +13,7 @@
             </div>
         </div>
 
+         <!-- Segunda seção explicando o projeto -->
         <div :class="box2_style"  id="ancora">
             <div class="box_02_titulo">
                 <h2>O QUE É O PROJETO <span class="efeitoPatas">QUATRO PATAS ?<br/></span></h2>
@@ -24,6 +26,7 @@
                 <img src="img/grupo_patas.jpeg" title="Grupo Quatro Patas">
             </div>
 
+            <!-- Terceira seção sobre campanha de adoção -->
             <div :class="box3_style">
                 <div class="box_03_conteudo">
                     <div class="box_03_texto">
@@ -36,6 +39,7 @@
                 </div>
             </div>
 
+             <!-- Quarta seção sobre mochilando pelas escolas -->
             <div :class="box4_style">
                 <div class="box_04_conteudo">
                     <div class="box_04_img">
@@ -49,6 +53,7 @@
                 </div>
             </div>
 
+             <!-- Quinta seção sobre comedores pela cidade -->
             <div :class="box5_style">
                 <div class="box_05_conteudo">
                     <div class="box_05_texto">

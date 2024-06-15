@@ -3,6 +3,7 @@
   <div class="container">
     <h1>Como Ajudar</h1>
     <div class="opcoes">
+      <!-- Opção para Pix -->
       <div class="opcao" @click="selecionarOpcao">
         <span>Pix</span>
         <p>Sua contribuição será muito bem-vinda. Qualquer valor será útil e nos ajudará bastante.</p>
@@ -35,6 +36,7 @@
           </select>
         </div>
       </div>
+      <!-- Opção para Outros -->
       <div class="opcao" @click="selecionarOpcao">
         <span>Outros</span>
         <p>Ajude de outras formas.</p>
@@ -60,14 +62,16 @@ export default {
   },
   data() {
     return {
-      mostrarQrCode: false
+      mostrarQrCode: false // Estado para mostrar ou esconder o QR Code
     };
   },
   methods: {
+    // Método para selecionar uma opção
     selecionarOpcao(evento) {
       const opcao = evento.currentTarget;
       const todasOpcoes = document.querySelectorAll('.opcao');
 
+    // Fecha todas as outras opções
       todasOpcoes.forEach((item) => {
         if (item !== opcao) {
           item.classList.remove('aberta');
@@ -78,6 +82,7 @@ export default {
         }
       });
 
+      // Alterna a opção selecionada
       opcao.classList.toggle('aberta');
       const detalhes = opcao.querySelector('.detalhes-opcao');
       if (detalhes) {
@@ -98,6 +103,7 @@ export default {
       });
     },
 
+    // Método para enviar o formulário
     enviarFormulario() {
       const pixInfo = document.getElementById('pix-info').value;
       const tipoRacao = document.querySelector('input[name="tipo-embalagem"]:checked');
