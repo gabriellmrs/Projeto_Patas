@@ -7,9 +7,9 @@
 
 <script>
 
-import HomeView from './views/HomeView.vue';
-import Footer from './components/Footer.vue';
-import LoginAdmin from './views/LoginAdmin.vue';
+import HomeView from './views/HomeView.vue'; // Importação do componente HomeView
+import Footer from './components/Footer.vue'; // Importação do componente Footer
+import LoginAdmin from './views/LoginAdmin.vue'; // Importação do componente LoginAdmin
 
 
 export default {
