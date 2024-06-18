@@ -449,6 +449,7 @@ export default {
         flex-direction: column-reverse;
         margin-left: -97px;
     }
+    
     .box_04_texto h3{
         font-size: 50px;
         padding: 10px;

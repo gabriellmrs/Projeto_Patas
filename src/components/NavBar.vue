@@ -15,7 +15,7 @@
             </ul>
             </div>
             <div class="mobile-menu-icon">
-                <!-- Botão para abrir o menu móvel -->v
+                <!-- Botão para abrir o menu móvel -->
                 <button @click="toggleMenu"><img src="img/menu_mobile.png"></button>
             </div>
         </nav>
